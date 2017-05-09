@@ -1153,9 +1153,9 @@
 
 		}
 
-		textarea{
+		textarea {
 				color:#000;
-				width:50%;
+				width:30%;
 				border-color: #fff;
 				background-color: #ddd;
 				resize: none;
@@ -1229,4 +1229,3 @@ a {
 .krajee-init-preview {
 		height:160px
 
-}
