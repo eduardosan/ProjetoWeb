@@ -1153,6 +1153,7 @@
 
 		}
 
+
 		textarea {
 				color:#000;
 				width:30%;
@@ -1163,6 +1164,11 @@
 		textarea:focus{
 				background-color: #fff;
 		}
+
+		textarea:hover{
+				background-color: #f00;
+		}
+
 
 		label{
 
@@ -1229,3 +1235,26 @@ a {
 .krajee-init-preview {
 		height:160px
 
+<<<<<<< HEAD
+=======
+}
+.container h2{
+	text-align: center;
+}
+.container img{
+	margin: auto;
+}
+
+.row section{
+	align-content: center;
+}
+.relatos {
+	align-content: center;
+}
+.relatos h3{
+	text-align: center;
+}
+section .major{
+	margin-bottom: 15px;
+}
+>>>>>>> cea747bae9e10383b44640abb14d1f3b8736aaa7
