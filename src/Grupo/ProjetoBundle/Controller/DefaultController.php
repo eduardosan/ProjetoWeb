@@ -12,6 +12,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('GrupoProjetoBundle:Default:home.html.twig');
+        return $this->render('GrupoProjetoBundle:View:home.html.twig');
     }
 }
