@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Relato</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ relato.id }}</td>
+            </tr>
+            <tr>
+                <th>Novorelato</th>
+                <td>{{ relato.novoRelato }}</td>
+            </tr>
+            <tr>
+                <th>Pais</th>
+                <td>{{ relato.pais }}</td>
+            </tr>
+            <tr>
+                <th>Cidade</th>
+                <td>{{ relato.cidade }}</td>
+            </tr>
+            <tr>
+                <th>Autor</th>
+                <td>{{ relato.autor }}</td>
+            </tr>
+            <tr>
+                <th>Data</th>
+                <td>{% if relato.data %}{{ relato.data|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('relatos_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('relatos_edit', { 'id': relato.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

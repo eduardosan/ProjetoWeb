@@ -1,0 +1,48 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Relatos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Novorelato</th>
+                <th>Pais</th>
+                <th>Cidade</th>
+                <th>Autor</th>
+                <th>Data</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for relato in relatos %}
+            <tr>
+                <td><a href="{{ path('relatos_show', { 'id': relato.id }) }}">{{ relato.id }}</a></td>
+                <td>{{ relato.novoRelato }}</td>
+                <td>{{ relato.pais }}</td>
+                <td>{{ relato.cidade }}</td>
+                <td>{{ relato.autor }}</td>
+                <td>{% if relato.data %}{{ relato.data|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('relatos_show', { 'id': relato.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('relatos_edit', { 'id': relato.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('relatos_new') }}">Create a new relato</a>
+        </li>
+    </ul>
+{% endblock %}

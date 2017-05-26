@@ -5,7 +5,7 @@ namespace Grupo\ProjetoBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class IndexControllerController extends Controller
+class IndexController extends Controller
 {
     /**
      * @Route("/")
