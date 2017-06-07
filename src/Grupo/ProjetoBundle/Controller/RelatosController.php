@@ -133,4 +133,19 @@ class RelatosController extends Controller
             ->getForm()
         ;
     }
+    
+    /**
+     * Deletes a relato entity.
+     *
+     * @Route("/images/{id}", name="relatos_image")
+     * @Method("POST")
+     */
+    public function imageAction(Request $request, Relatos $relato)
+    {
+        $images = $request->get('files');
+        
+        // Precisa salvar as imagens em algum lugar
+
+        return $this->redirectToRoute('relatos_index');
+    }
 }

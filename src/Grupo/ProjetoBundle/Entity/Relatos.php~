@@ -167,4 +167,33 @@ class Relatos
     {
         return $this->novoRelato;
     }
+    /**
+     * @var image
+     */
+    private $imagem;
+
+
+    /**
+     * Set imagem
+     *
+     * @param \image $imagem
+     *
+     * @return Relatos
+     */
+    public function setImagem(\image $imagem)
+    {
+        $this->imagem = $imagem;
+
+        return $this;
+    }
+
+    /**
+     * Get imagem
+     *
+     * @return \image
+     */
+    public function getImagem()
+    {
+        return $this->imagem;
+    }
 }

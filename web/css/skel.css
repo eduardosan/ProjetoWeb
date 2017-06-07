@@ -20,7 +20,7 @@
 	.container {
 		margin-left: auto;
 		margin-right: auto;
-		height: 30px;
+		height: auto;
 		/* width: (containers) */
 		width: 1200px;
 

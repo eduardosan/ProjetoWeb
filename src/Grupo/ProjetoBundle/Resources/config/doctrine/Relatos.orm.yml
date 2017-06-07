@@ -29,3 +29,4 @@ Grupo\ProjetoBundle\Entity\Relatos:
     data:
       type: date
       required: true
+ 
