@@ -144,6 +144,7 @@ class RelatosController extends Controller
     {
         $images = $request->get('files');
         
+        
         // Precisa salvar as imagens em algum lugar
 
         return $this->redirectToRoute('relatos_index');
