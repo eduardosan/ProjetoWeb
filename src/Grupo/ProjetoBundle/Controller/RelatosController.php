@@ -10,7 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
 /**
  * Relato controller.
  *
- * @Route("relatos")
+ * @Route("/")
  */
 class RelatosController extends Controller
 {
