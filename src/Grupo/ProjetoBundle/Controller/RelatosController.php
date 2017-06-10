@@ -5,7 +5,8 @@ namespace Grupo\ProjetoBundle\Controller;
 use Grupo\ProjetoBundle\Entity\Relatos;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Relato controller.
@@ -142,7 +143,11 @@ class RelatosController extends Controller
      */
     public function imageAction(Request $request, Relatos $relato)
     {
-        $images = $request->get('files');
+        // Diretório padrão
+        $root_dir = $this->container->get('kernel')->getRootDir();
+        $web_dir = $root_dir . "/../web/";
+
+        $images = $request->files->get('files');
         
         
         // Precisa salvar as imagens em algum lugar
